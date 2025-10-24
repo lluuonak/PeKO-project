@@ -19,6 +19,7 @@ body {
 .container {
     width: 100vw;
     margin: 0 auto;
+    background-color: #EAFAFF;
 }
 
 /* 컨텐츠 래퍼: 좌우 여백 설정 */
@@ -28,16 +29,74 @@ body {
     padding-right: 5.33vw; */
 }
 
-.con5 {
+
+/* con4 */
+.con4 {
+    position: relative;
+    background-image: url(/images/cloud-grp.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 50%;
+    height: 102.5641vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.con4 p {
+    font-family: "Samliphopangche", sans-serif;
+    text-align: center;
+    margin: 0;
+}
+.con4 p:nth-of-type(1) {
+    font-size: 5.1282vw;
+    margin-bottom: 4.1026vw;
+}
+.con4 p:nth-of-type(2) {
+    font-size: 7.6923vw;
+    line-height: 10.2564vw;
+}
+.con4 p:nth-of-type(2) strong {
+    color: #00B0EB;
+    font-size: 8.2051vw;
+    display: inline-block; 
+    position: relative; 
+    z-index: 10;
+}
+
+.con4 p:nth-of-type(2) strong::after {
+    content: "";
+    display: block;
+    width: 102%; 
+    height: 3.3333vw; 
+    background-color: #A7E1F4;    
+    position: absolute;
+    left: -0.2vw;
+    bottom: 1vw; 
+    z-index: -1; 
+}
+.con4 .peko-intro {
+}
+.con4 .cloud {
+    position: absolute;
+}
+.con4 .cld1 {}
+.con4 .cld2 {}
+.con4 .cld3 {}
+
+
+
+/* con6 */
+.con6 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url('../images/con5-bg.png');
+    background-image: url('../images/con6-bg.png');
     overflow: hidden; 
-    position: relative;  
+    position: relative;
+    margin-bottom: 0; 
 }
 
-.con5 .event-title {
+.con6 .event-title {
     width: 16.5154vw;
     height: 8.1923vw;
     margin: auto;
@@ -54,29 +113,29 @@ body {
     margin-top: 7.6923vw;
 }
 
-.con5 .peko-quiz {
+.con6 .peko-quiz {
     /* width: 36.1538vw;
     margin: auto; */
 }
-.con5 .peko-ground {
+.con6 .peko-ground {
     width: 102vw;
 
 }
-.con5 h2 {
+.con6 h2 {
         font-family: "Samliphopangche", sans-serif;
         font-size: 7.1795vw;
         text-align: center;
         margin-top: 8.4615vw;
         margin-bottom: 9.2308vw;
       }
-.con5 p {
+.con6 p {
         text-align: center;
         font-size: 3.5897vw;
         line-height: 6.1538vw;
         margin-bottom: 6.9231vw;
         margin-top: 0;
       }
-.con5 .quiz-btn {
+.con6 .quiz-btn {
     width: 92.3077vw;
     height: 15.3846vw;
     background-color: #000;
@@ -87,15 +146,148 @@ body {
     font-size: 4.1026vw;
     font-weight: 600;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@media (min-width: 769px) {
-    /* 769px 이상의 화면에서는 확대 비율을 768px 기준으로 고정 */
 
-    /* 최상위 래퍼의 최대 너비를 768px로 제한하여 전체 확대 방지 */
+
+@media (min-width: 431px) {
+    /* 계산 기준: 430px */
+    
+    /* 1. 최상위 래퍼의 최대 너비를 430px로 제한하여 전체 확대 방지 */
     .container {
-        max-width: 768px;
+        max-width: 430px;
     }
 
+    /* 2. body 및 기본 텍스트 스타일 고정 */
+    body {
+        /* 430px * 4.10vw = 약 17.63px */
+        font-size: 17.6px; 
+    }
+
+    /* 3. 제목 크기 고정 */
+    h2 {
+        /* 430px * 6.15vw = 약 26.445px */
+        font-size: 26.4px; 
+        /* 430px * 5.13vw = 약 22.059px */
+        margin-top: 22px; 
+        /* 430px * 2.56vw = 약 11.008px */
+        margin-bottom: 11px; 
+    }
     
+    /* 4. 컨텐츠 래퍼의 좌우 여백 고정 */
+    .content-wrap {
+        /* 430px * 5.13vw = 약 22.059px */
+        /* padding-left: 22px; */
+        /* padding-right: 22px; */
+    }
+    
+    /* 5. con4 요소 크기 및 내부 폰트 고정 */
+    .con4 {
+        /* 430px * 102.56vw = 약 441px */
+        height: 441px;
+    }
+    .con4 p:nth-of-type(1) {
+        /* 430px * 5.1282vw = 약 22.05px */
+        font-size: 22px;
+        /* 430px * 4.1026vw = 약 17.64px */
+        margin-bottom: 18px;
+    }
+    .con4 p:nth-of-type(2) {
+        /* 430px * 7.6923vw = 약 33.07px */
+        font-size: 33px;
+        /* 430px * 10.2564vw = 약 44.1px */
+        line-height: 44px;
+    }
+    .con4 p:nth-of-type(2) strong {
+        /* 430px * 8.2051vw = 약 35.28px */
+        font-size: 35px;
+    }
+    .con4 p:nth-of-type(2) strong::after {
+        /* 430px * 3.3333vw = 약 14.33px */
+        height: 14px;
+        /* 430px * 1vw = 약 4.3px */
+        bottom: 4px;
+    }
+
+
+
+    /* con5 */
+    .con5 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10.2564vw;
+    }
+    .con5 .profile {}
+    .con5 .about-peko {
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+    /* con6 */
+    .con6 {
+        /* padding-top/bottom 고정 (430px * 10.25vw = 약 44.075px) */
+        padding-top: 44px;
+        padding-bottom: 44px;
+        /* con6의 배경 이미지가 430px에 맞게 고정되도록 height도 고정
+           (실제 콘텐츠 높이에 따라 이 값은 달라질 수 있습니다.) */
+        /* height: 662px; (이 값은 실제 디자인 높이에 맞게 조정 필요) */
+    }
+    
+    /* .event-title */
+    .con6 .event-title {
+        /* 430px * 16.5154vw = 약 71.01px */
+        width: 71px;
+        /* 430px * 8.1923vw = 약 35.22px */
+        height: 35px;
+        /* 430px * 3.0769vw = 약 13.23px */
+        font-size: 13.2px;
+        /* 430px * 7.6923vw = 약 33.07px */
+        margin-top: 33px;
+    }
+    
+    /* con6 h2, p */
+    .con6 h2 {
+        /* 430px * 7.1795vw = 약 30.87px */
+        font-size: 30.9px;
+        /* 430px * 8.4615vw = 약 36.38px */
+        margin-top: 36px;
+        /* 430px * 9.2308vw = 약 39.69px */
+        margin-bottom: 40px;
+    }
+    .con6 p {
+        /* 430px * 3.5897vw = 약 15.43px */
+        font-size: 15.4px;
+        /* 430px * 6.1538vw = 약 26.46px */
+        line-height: 26.5px;
+        /* 430px * 6.9231vw = 약 29.76px */
+        margin-bottom: 30px;
+    }
+
+    /* ⭐ 7. 절대 위치 요소인 quiz-btn의 크기와 위치를 px로 고정 ⭐ */
+    .con6 .quiz-btn {
+        /* 430px * 92.3077vw = 약 396.92px */
+        width: 397px; 
+        /* 430px * 15.3846vw = 약 66.15px */
+        height: 66px; 
+        
+        /* 430px * 6.1538vw = 약 26.46px */
+        bottom: 26px; 
+        
+        /* 중앙 정렬: absolute 요소 중앙 정렬 공식 */
+        left: 50%;
+        margin-left: -198.5px; /* width의 절반: -(397px / 2) */
+    }
 }
