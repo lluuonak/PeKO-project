@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'Samliphopangche'; 
+    src: url('../font/SDSamliphopangcheTTFBasic.ttf') format('truetype');
+    
+    /* 폰트의 기본 굵기와 스타일 설정 (선택 사항) */
+    font-weight: Ba; 
+    font-style: Ba;
+    
+    /* 폰트 로딩 전략: 필수(block), 권장(swap) */
+    font-display: swap; 
+}
+
+/* Pretendard 폰트 적용 */
+body {
+    font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    line-height: 1.5;
+}
+
+.container {
+    width: 100vw;
+    margin: 0 auto;
+}
+
+/* 컨텐츠 래퍼: 좌우 여백 설정 */
+.content-wrap {
+    /* 좌우 여백을 375px 기준 20px (5.33vw)로 설정 */
+    /* padding-left: 5.33vw;
+    padding-right: 5.33vw; */
+}
+
+.con5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('../images/con5-bg.png');
+    overflow: hidden;   
+}
+
+.con5 .event-title {
+    width: 16.5154vw;
+    height: 8.1923vw;
+    margin: auto;
+    background-image: url('/images/event-bg.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.0769vw;
+    margin-top: 7.6923vw;
+}
+
+.con5 .peko-quiz {
+    /* width: 36.1538vw;
+    margin: auto; */
+}
+.con5 .peko-ground {
+    width: 102vw;
+
+}
+.con5 h2 {
+        font-family: "Samliphopangche", sans-serif;
+        font-size: 7.1795vw;
+        text-align: center;
+        margin-top: 8.4615vw;
+        margin-bottom: 9.2308vw;
+      }
+.con5 p {
+        text-align: center;
+        font-size: 3.5897vw;
+        line-height: 6.1538vw;
+        margin-bottom: 6.9231vw;
+        margin-top: 0;
+      }
+
+
+@media (min-width: 769px) {
+    /* 769px 이상의 화면에서는 확대 비율을 768px 기준으로 고정 */
+
+    /* 최상위 래퍼의 최대 너비를 768px로 제한하여 전체 확대 방지 */
+    .container {
+        max-width: 768px;
+    }
+
+    
+}
