@@ -33,7 +33,8 @@ body {
     flex-direction: column;
     justify-content: center;
     background-image: url('../images/con5-bg.png');
-    overflow: hidden;   
+    overflow: hidden; 
+    position: relative;  
 }
 
 .con5 .event-title {
@@ -75,7 +76,18 @@ body {
         margin-bottom: 6.9231vw;
         margin-top: 0;
       }
-
+.con5 .quiz-btn {
+    width: 92.3077vw;
+    height: 15.3846vw;
+    background-color: #000;
+    position: absolute;
+    bottom: 6.1538vw;
+    margin: auto;
+    color: #fff;
+    font-size: 4.1026vw;
+    font-weight: 600;
+    padding: 0;
+}
 
 @media (min-width: 769px) {
     /* 769px 이상의 화면에서는 확대 비율을 768px 기준으로 고정 */
