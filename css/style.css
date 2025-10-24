@@ -153,7 +153,7 @@ body {
 
 
 
-@media (min-width: 431px) {
+@media (min-width: 321px) {
     /* 계산 기준: 430px */
     
     /* 1. 최상위 래퍼의 최대 너비를 430px로 제한하여 전체 확대 방지 */
