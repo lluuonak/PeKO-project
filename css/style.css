@@ -49,7 +49,7 @@ html, body {
 .con1 .koica {
     position: absolute;
     top: 15.3846vw;
-    right: 0;
+    right: 2.5641vw;
     width: 80.7692vw;
 }
 .con1 .intro-wrap {
@@ -199,17 +199,30 @@ html, body {
         width: 29.2308vw;
         
     }
-      .con5 .about-peko .about-cards {
-        display: flex;
+    .con5 .about-peko .about-cards {
+        display: flex; /* 이미지를 가로로 나열 */
         gap: 4.1026vw;
-        white-space: nowrap;
-        overflow-x: auto;   
+        white-space: nowrap; /* (선택 사항이지만 안전을 위해 유지) */
+        
+        /* 요소가 넘칠 때 가로 스크롤 활성화 */
+        overflow-x: auto; 
+        
         width: 100%;
-      }
-      .con5 .about-peko .about-cards img {
+        /* padding-left: 5.33vw;
+        padding-right: 5.33vw; */ /* 좌우 여백을 이 곳에 추가하면 스크롤 영역에 여백이 생깁니다. */
+    }
+    .con5 .about-peko .about-cards::-webkit-scrollbar {
+    display: none; /* 스크롤바 영역 자체를 숨김 */
+}
+
+    .con5 .about-peko .about-cards {
+        -ms-overflow-style: none; /* IE, Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+    .con5 .about-peko .about-cards img {
         width: 23.0769vw;
         flex-shrink: 0; /* 이미지 크기 고정 */
-    scroll-snap-align: start; /* 스냅 정렬 (선택사항) */
+        scroll-snap-align: start; /* 스냅 정렬 (선택사항) */
       }
     .con5 .profile .profile-img {
         /* width: 33.5897vw; */
@@ -294,6 +307,7 @@ html, body {
     justify-content: center;
     align-items: center;
     z-index: 100;
+    text-decoration: none;
 }
 
 .con6 .event-wrap .event-check {
