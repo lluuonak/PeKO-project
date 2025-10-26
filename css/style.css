@@ -116,6 +116,12 @@ html, body {
     right: 3.8462vw;
     top: 94.3590vw;
 }
+.con2 .zip-file {
+    width: 32.3077vw;
+    position: absolute;
+    left: 8.4615vw;
+    bottom: 16.4103vw;
+}
 
 
 /* con4 */
@@ -313,7 +319,7 @@ html, body {
 .con6 .event-wrap .event-check {
     position: absolute;
     top: 40vw;
-    left: 50%;
+    left: 50%;c
     transform: translateX(-50%);
 }
 
