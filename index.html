@@ -19,17 +19,32 @@
   <body>
     <div class="container">
       <div class="content-wrap">
-        <div class="con1">
-          <img class='koica' src="/images/KOICA.svg" alt="코이카bg">
-          <div class="intro-wrap">
-            <img class="txt txt1" src="/images/txt1.png" alt="텍스트1">
-            <img class="txt txt2" src="/images/txt2.png" alt="텍스트2">
-          </div>
-          <div class="title-wrap">
-            <img class="korea" src="/images/con1-title.svg" alt="대한민국, 이제 세계를 돕다">
-            <img class="sun" src="/images/con1-sun.png" alt="해 배경">
-          </div>
-        </div>
+       <div class="con1">
+  <img class='koica' src="/images/KOICA.svg" alt="코이카bg">
+  
+  <div class="intro-wrap">
+    <img class="txt txt1" src="/images/txt1.png" alt="텍스트1" 
+         data-aos="fade-up" 
+         data-aos-duration="1000" 
+         data-aos-delay="500" 
+         data-aos-once="true">
+    
+    <img class="txt txt2" src="/images/txt2.png" alt="텍스트2" 
+         data-aos="fade-up" 
+         data-aos-duration="1000" 
+         data-aos-delay="1000" 
+         data-aos-once="true">
+  </div>
+  
+  <div class="title-wrap">
+    <img class="korea" src="/images/con1-title.svg" alt="대한민국, 이제 세계를 돕다" 
+         data-aos="fade-up" 
+         data-aos-duration="1500"
+         data-aos-once="true">
+    
+    <img class="sun" src="/images/con1-sun.png" alt="해 배경">
+  </div>
+</div>
         <div class="con2">
           <img class="web1" src="/images/peko-web1.svg" alt="웹1">
           <img class="mini-web web2" src="/images/peko-web2.svg" alt="웹2">
@@ -79,10 +94,11 @@
 
     <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
 
-    <script>
-      // AOS.init({
-      //     once: true,
-      // });
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <script>
+      AOS.init({
+        once: true, // 애니메이션을 한 번만 실행 (스크롤 올리고 내릴 때마다 반복 X)
+        // duration: 1000, // 기본 애니메이션 지속 시간을 1000ms로 설정 (선택 사항)
+      });
     </script>
   </body>
 </html>
