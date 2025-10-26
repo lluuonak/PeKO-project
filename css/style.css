@@ -92,19 +92,30 @@ html, body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    position: relative;
 
 }
 .con2 .web1 {
     width: 87.1795vw;
     display: block;
     margin: auto;
+    padding-bottom: 100.7692vw;
+    box-sizing: border-box;
 }
 
 .con2 .mini-web {
     width: 44.6154vw;
 }
-
-
+.con2 .web2 {
+    position: absolute;
+    left: 3.8462vw;
+    top: 79.2308vw;
+}
+.con2 .web3 {
+    position: absolute;
+    right: 3.8462vw;
+    top: 94.3590vw;
+}
 
 
 /* con4 */
@@ -268,6 +279,7 @@ html, body {
     background-color: #000;
     position: absolute;
     bottom: 6.1538vw;
+    display: block;
     margin: auto;
     color: #fff;
     font-size: 4.1026vw;
