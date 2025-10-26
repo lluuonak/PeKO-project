@@ -24,6 +24,7 @@ html, body {
     width: 100vw;
     margin: 0 auto;
     background-color: #EAFAFF;
+    overflow: hidden;
 }
 
 /* 컨텐츠 래퍼: 좌우 여백 설정 */
@@ -32,6 +33,78 @@ html, body {
     /* padding-left: 5.33vw;
     padding-right: 5.33vw; */
 }
+
+
+
+/* con1 */
+.con1 {
+    background-image: url('/images/con1-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    position: relative;
+}
+
+.con1 .koica {
+    position: absolute;
+    top: 15.3846vw;
+    right: 0;
+    width: 80.7692vw;
+}
+.con1 .intro-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10.2564vw;
+    padding-top: 66.9231vw;
+    box-sizing: border-box;
+    padding-bottom: 45.1282vw;
+}
+.con1 .intro-wrap .txt {
+    width: 64.3590vw;
+    /* background-color: #000; */
+}
+.con1 .txt1 {
+}
+.con1 .txt2 {
+}
+.con1 .title-wrap {
+    position: relative;
+}
+.con1 .title-wrap .korea {
+    width: 77.9487vw;
+    position: absolute;
+    top: 40.5128vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.con1 .title-wrap .sun {
+    width: 100vw;
+    display: block; 
+    margin: auto;
+
+}
+
+/* con2 */
+.con2 {
+    background-image: url(/images/con2-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+.con2 .web1 {
+    width: 87.1795vw;
+    display: block;
+    margin: auto;
+}
+
+.con2 .mini-web {
+    width: 44.6154vw;
+}
+
+
 
 
 /* con4 */
@@ -239,8 +312,8 @@ html, body {
     /* 4. 컨텐츠 래퍼의 좌우 여백 고정 (⭐⭐ 주석 해제 및 px 고정 ⭐⭐) */
     .content-wrap {
         /* 430px * 5.13vw = 약 22.059px */
-        padding-left: 22px;
-        padding-right: 22px;
+        /* padding-left: 22px; */
+        /* padding-right: 22px; */
     }
     
     /* 5. con4 요소 크기 및 내부 폰트 고정 */

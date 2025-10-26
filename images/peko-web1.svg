@@ -1,0 +1,12 @@
+<svg width="340" height="337" viewBox="0 0 340 337" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="0.5" width="339" height="336" rx="4.5" fill="#ECF6FF"/>
+<rect x="0.5" y="0.5" width="339" height="336" rx="4.5" stroke="#3C5E9B"/>
+<path d="M5 0.5H335C337.485 0.500003 339.5 2.51472 339.5 5V21.5H0.5V5C0.5 2.51472 2.51472 0.5 5 0.5Z" fill="#B3E7F6"/>
+<path d="M5 0.5H335C337.485 0.500003 339.5 2.51472 339.5 5V21.5H0.5V5C0.5 2.51472 2.51472 0.5 5 0.5Z" stroke="#3C5E9B"/>
+<line x1="31.5" y1="15.5" x2="23.5" y2="15.5" stroke="#3C5E9B" stroke-linecap="round"/>
+<rect x="38.5" y="7.5" width="8" height="8" stroke="#3C5E9B"/>
+<path d="M13.5 11.5L18 16M13.5 11.5L9 7M13.5 11.5L9 16M13.5 11.5L18 7" stroke="#3C5E9B" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="57.45" y1="6.05" x2="329.55" y2="6.05" stroke="#90C3EB" stroke-width="0.9" stroke-linecap="round"/>
+<line x1="57.45" y1="10.55" x2="329.55" y2="10.55" stroke="#90C3EB" stroke-width="0.9" stroke-linecap="round"/>
+<line x1="57.45" y1="15.05" x2="329.55" y2="15.05" stroke="#90C3EB" stroke-width="0.9" stroke-linecap="round"/>
+</svg>
