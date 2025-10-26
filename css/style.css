@@ -273,14 +273,19 @@ html, body {
         margin-bottom: 6.9231vw;
         margin-top: 0;
       }
-.con6 .quiz-btn {
+.con6 .event-wrap {
+        position: relative;
+      }
+.con6 .event-wrap .quiz-btn {
     width: 92.3077vw;
     height: 15.3846vw;
     background-color: #000;
+    text-align: center;
     position: absolute;
-    bottom: 6.1538vw;
-    display: block;
-    margin: auto;
+    bottom: 7.6923vw;
+    border-radius: 2.5641vw;
+    left: 50%;
+    transform: translateX(-50%);
     color: #fff;
     font-size: 4.1026vw;
     font-weight: 600;
@@ -288,9 +293,15 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 100;
 }
 
-
+.con6 .event-wrap .event-check {
+    position: absolute;
+    top: 40vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
 
 
