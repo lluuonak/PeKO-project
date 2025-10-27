@@ -21,6 +21,23 @@ html, body {
     max-width: 100%;
 }
 
+img {
+    -webkit-user-drag: none; /* Webkit 기반 브라우저 */
+}
+
+body, .container {
+    /* 표준 속성: 콘텐츠 선택(하이라이트)을 비활성화 */
+    user-select: none; 
+    
+    /* -webkit- 접두사: Chrome, Safari 등 Webkit 기반 브라우저 */
+    -webkit-user-select: none; 
+    
+    /* -moz- 접두사: Firefox */
+    -moz-user-select: none; 
+    
+    /* -ms- 접두사: IE/Edge */
+    -ms-user-select: none; 
+}
 
 .container {
     width: 100%;
