@@ -21,7 +21,7 @@ html, body {
 }
 
 .container {
-    width: 100vw;
+    width: 100%;
     margin: 0 auto;
     background-color: #EAFAFF;
     overflow: hidden;
@@ -80,7 +80,7 @@ html, body {
     transform: translateX(-50%);
 }
 .con1 .title-wrap .sun {
-    width: 100vw;
+    width: 100%;
     display: block; 
     margin: auto;
 
@@ -319,7 +319,7 @@ html, body {
 .con6 .event-wrap .event-check {
     position: absolute;
     top: 40vw;
-    left: 50%;c
+    left: 50%;
     transform: translateX(-50%);
 }
 
