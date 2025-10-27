@@ -252,17 +252,15 @@ html, body {
         
     }
     .con5 .about-peko .about-cards {
-        display: flex; /* 이미지를 가로로 나열 */
-        gap: 4.1026vw;
-        white-space: nowrap; /* (선택 사항이지만 안전을 위해 유지) */
-        
-        /* 요소가 넘칠 때 가로 스크롤 활성화 */
-        overflow-x: auto; 
-        
-        width: 100%;
-        /* padding-left: 5.33vw;
-        padding-right: 5.33vw; */ /* 좌우 여백을 이 곳에 추가하면 스크롤 영역에 여백이 생깁니다. */
-    }
+        display: flex;
+    gap: 4.1026vw;
+    white-space: nowrap;
+    overflow-x: auto;
+    width: 100%;
+    scroll-snap-type: x mandatory;   /* ← 스와이프 UX 부드럽게 */
+    -webkit-overflow-scrolling: touch; /* ← iOS에서 터치 스크롤 부드럽게 */
+    scroll-behavior: smooth;           /* ← 애니메이션 부드럽게 */
+}
     .con5 .about-peko .about-cards::-webkit-scrollbar {
     display: none; /* 스크롤바 영역 자체를 숨김 */
 }
@@ -274,7 +272,7 @@ html, body {
     .con5 .about-peko .about-cards img {
         width: 23.0769vw;
         flex-shrink: 0; /* 이미지 크기 고정 */
-        scroll-snap-align: start; /* 스냅 정렬 (선택사항) */
+        scroll-snap-align: center; /* ← 카드 하나씩 정렬 */
       }
     .con5 .profile .profile-img {
         /* width: 33.5897vw; */
@@ -315,7 +313,25 @@ html, body {
     font-size: 3.0769vw;
     margin-top: 7.6923vw;
 }
-
+.con6 p {
+    position: relative;
+}
+.con6 p strong {
+    font-weight: medium;
+    z-index: 1;
+}
+.con6 p strong::after {
+    /* content: '';
+    width: 17.1795vw;
+    height: 2.3077vw;
+    display: block;
+    background-color: #FFEBB1;
+    position: absolute;
+    top: 9.4872vw;
+    left: 34.6410vw;
+    z-index: 0; */
+    
+}
 .con6 .peko-quiz {
     /* width: 36.1538vw;
     margin: auto; */
