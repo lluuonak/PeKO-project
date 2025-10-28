@@ -165,7 +165,7 @@ body, .container {
 }
 .con4 p:nth-of-type(1) {
     font-size: 5.1282vw;
-    margin-bottom: 4.1026vw;
+    margin-bottom: 1.0513vw;
 }
 .con4 p:nth-of-type(2) {
     font-size: 7.6923vw;
@@ -196,6 +196,9 @@ body, .container {
     display: block;
     font-size: 6.6667vw;
     text-align: center;
+    line-height: 1.2;
+    margin-bottom: 2vw;
+    color: #006B8F;
 }
 .con4 .cloud {
     position: absolute;
