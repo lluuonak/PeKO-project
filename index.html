@@ -20,31 +20,28 @@
     <div class="container">
       <div class="content-wrap">
        <div class="con con1">
-  <img class='koica' src="/images/KOICA.svg" alt="코이카bg">
-  
-  <div class="intro-wrap">
-    <img class="txt txt1" src="/images/txt1.png" alt="텍스트1" 
-         data-aos="fade-up" 
-         data-aos-duration="1000" 
-         data-aos-delay="200" 
-         data-aos-once="true">
-    
-    <img class="txt txt2" src="/images/txt2.png" alt="텍스트2" 
-         data-aos="fade-up" 
-         data-aos-duration="1000" 
-         data-aos-delay="800" 
-         data-aos-once="true">
-  </div>
-  
-  <div class="title-wrap">
-    <img class="korea" src="/images/con1-title.svg" alt="대한민국, 이제 세계를 돕다" 
-         data-aos="fade-up" 
-         data-aos-duration="1500"
-         data-aos-once="true">
-    
-    <img class="sun" src="/images/con1-sun.png" alt="해 배경">
-  </div>
-</div>
+          <img class='koica' src="/images/KOICA.svg" alt="코이카bg">
+          
+          <div class="intro-wrap">
+            <div class="txt1">              
+              <img class="txt txt01" src="/images/txt01.svg" alt="텍스트1" >
+              <img class="txt txt02" src="/images/txt02.svg" alt="텍스트2" >
+            </div>
+            <div class="txt2">              
+              <img class="txt txt03" src="/images/txt03.svg" alt="텍스트1" >
+              <img class="txt txt04" src="/images/txt04.svg" alt="텍스트2" >
+            </div>
+          </div>
+          
+          <div class="title-wrap">
+            <img class="korea" src="/images/con1-title.svg" alt="대한민국, 이제 세계를 돕다" 
+                data-aos="fade-up" 
+                data-aos-duration="1500"
+                data-aos-once="true">
+            
+            <img class="sun" src="/images/con1-sun.png" alt="해 배경">
+        </div>
+      </div>
         <div class="con con2">
           <img class="web1" src="/images/peko-web1.svg" alt="웹1">
           <img class="mini-web web2" src="/images/peko-web2.svg" alt="웹2">
@@ -54,17 +51,18 @@
         <div class="con con3"></div>
         <div class="con con4">
             <div class="peko-intro">
-                <p>한국 국제개발협력 기관 KOICA</p>
-                <p>평화요정 <strong>PeKO</strong>를<br/>소개합니다!</p>
+                <p>한국국제협력단</p>
+                <strong class="koicaa">KOICA</strong>
+                <p>평화요정 <strong class="pekoo">PeKO</strong>를<br/>소개합니다!</p>
             </div>
         </div>
         <div class="con con5">
             <div class="profile">
                 <img class="profile-img" src="/images/peko-profile1.png" alt="피코소개">
-                <img class="flower pink-f pink-f1" src="/images/peko-flower-pink.svg" alt="핑크꽃1">
-                <img class="flower yellow-f yellow-f1" src="/images/peko-flower-yellow.svg" alt="노랑꽃1">
-                <img class="flower pink-f pink-f2" src="/images/peko-flower-pink.svg" alt="핑크꽃2">
-                <img class="flower yellow-f yellow-f2" src="/images/peko-flower-yellow.svg" alt="노랑꽃2">
+                <img class="flower pink-f pink-f1" src="/images/peko-flower-pink.png" alt="핑크꽃1">
+                <img class="flower yellow-f yellow-f1" src="/images/peko-flower-yellow.png" alt="노랑꽃1">
+                <img class="flower pink-f pink-f2" src="/images/peko-flower-pink.png" alt="핑크꽃2">
+                <img class="flower yellow-f yellow-f2" src="/images/peko-flower-yellow.png" alt="노랑꽃2">
             </div>
             <div class="about-peko">
                 <img class="clover" src="/images/peko-clover.png" alt="피코클로버">
@@ -84,7 +82,7 @@
             <h2>피코의 깜짝 능력 시험!</h2>
             <p>
                 글로벌 평화요정 피코가 준비한 쉽고 재미있는 ODA 퀴즈!<br />
-                문제를 맞히고 <strong>배민 상품권</strong>의 주인공이 되어 보세요!
+                문제를 맞히고 <strong>CJ 상품권</strong>의 주인공이 되어 보세요!
             </p>
             <div class="event-wrap">
                 <img class="peko-ground" src="/images/peko-ground.png" alt="이벤트 배경">
@@ -96,12 +94,140 @@
     </div>
 
     <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
-
    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <script>
-      AOS.init({
-        once: true, // 애니메이션을 한 번만 실행 (스크롤 올리고 내릴 때마다 반복 X)
-        // duration: 1000, // 기본 애니메이션 지속 시간을 1000ms로 설정 (선택 사항)
-      });
+        
+        // AOS 초기화
+        AOS.init({
+          once: true,
+          disable: false,
+        });
+
+         // con1 순차 애니메이션 처리
+        const txt01 = document.querySelector('.txt01');
+        const txt02 = document.querySelector('.txt02');
+        const txt03 = document.querySelector('.txt03');
+        const txt04 = document.querySelector('.txt04');
+
+        let txt1GroupShown = false;
+        let txt2GroupShown = false;
+
+        // 처음에 모든 텍스트 숨기기
+        [txt01, txt02, txt03, txt04].forEach(el => {
+          el.style.opacity = '0';
+          el.style.transform = 'translateY(30px)';
+          el.style.transition = 'opacity 1s ease, transform 1s ease';
+        });
+
+        // 페이지 로드 시 스크롤 방지
+        document.body.style.overflow = 'hidden';
+
+        // 페이지 로드 후 txt01, txt02 순차 표시
+        window.addEventListener('load', () => {
+          // txt01 먼저 표시
+          setTimeout(() => {
+            txt01.style.opacity = '1';
+            txt01.style.transform = 'translateY(0)';
+          }, 300);
+          
+          // txt02를 약간의 시간차로 표시
+          setTimeout(() => {
+            txt02.style.opacity = '1';
+            txt02.style.transform = 'translateY(0)';
+            
+            // txt02 애니메이션 완료 후 스크롤 대기
+            setTimeout(() => {
+              txt1GroupShown = true;
+            }, 1000);
+          }, 800); // txt01 이후 500ms 후
+        });
+
+        // 스크롤 시도 횟수
+        let scrollAttempts = 0;
+
+        // 스크롤 이벤트 핸들러
+        function handleScrollForTxt2(e) {
+          if (!txt1GroupShown) {
+            e.preventDefault();
+            return;
+          }
+
+          if (!txt2GroupShown && txt1GroupShown) {
+            e.preventDefault();
+            scrollAttempts++;
+            
+            if (scrollAttempts === 1) {
+              // txt03 먼저 표시
+              txt03.style.opacity = '1';
+              txt03.style.transform = 'translateY(0)';
+              
+              // txt04를 약간의 시간차로 표시
+              setTimeout(() => {
+                txt04.style.opacity = '1';
+                txt04.style.transform = 'translateY(0)';
+                
+                // txt04 애니메이션 완료 후 스크롤 잠금 해제
+                setTimeout(() => {
+                  txt2GroupShown = true;
+                  document.body.style.overflow = 'auto';
+                  
+                  // 이벤트 리스너 제거
+                  window.removeEventListener('wheel', handleScrollForTxt2);
+                  window.removeEventListener('touchmove', handleTouchMoveForTxt2);
+                }, 1000);
+              }, 500); // txt03 이후 500ms 후
+            }
+          }
+        }
+
+        // 휠 이벤트 (데스크톱)
+        window.addEventListener('wheel', handleScrollForTxt2, { passive: false });
+
+        // 터치 이벤트 (모바일)
+        let touchStartY = 0;
+
+        window.addEventListener('touchstart', (e) => {
+          touchStartY = e.touches[0].clientY;
+        }, { passive: false });
+
+        function handleTouchMoveForTxt2(e) {
+          if (!txt1GroupShown) {
+            e.preventDefault();
+            return;
+          }
+
+          if (!txt2GroupShown && txt1GroupShown && scrollAttempts === 0) {
+            const touchY = e.touches[0].clientY;
+            const deltaY = touchStartY - touchY;
+            
+            // 아래로 스크롤 시도 (30px 이상)
+            if (deltaY > 30) {
+              e.preventDefault();
+              scrollAttempts++;
+              
+              // txt03 먼저 표시
+              txt03.style.opacity = '1';
+              txt03.style.transform = 'translateY(0)';
+              
+              // txt04를 약간의 시간차로 표시
+              setTimeout(() => {
+                txt04.style.opacity = '1';
+                txt04.style.transform = 'translateY(0)';
+                
+                // txt04 애니메이션 완료 후 스크롤 잠금 해제
+                setTimeout(() => {
+                  txt2GroupShown = true;
+                  document.body.style.overflow = 'auto';
+                  
+                  // 이벤트 리스너 제거
+                  window.removeEventListener('wheel', handleScrollForTxt2);
+                  window.removeEventListener('touchmove', handleTouchMoveForTxt2);
+                }, 1000);
+              }, 500); // txt03 이후 500ms 후
+            }
+          }
+        }
+
+        window.addEventListener('touchmove', handleTouchMoveForTxt2, { passive: false });
     </script>
   </body>
 </html>

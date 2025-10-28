@@ -84,6 +84,8 @@ body, .container {
 .con1 .intro-wrap .txt {
     width: 64.3590vw;
     /* background-color: #000; */
+    display: flex;
+    justify-content: center;
 }
 .con1 .txt1 {
 }
@@ -156,7 +158,7 @@ body, .container {
     align-items: center;
     justify-content: center;
 }
-.con4 p {
+.con4 p, strong {
     font-family: "Samliphopangche", sans-serif;
     text-align: center;
     margin: 0;
@@ -169,7 +171,7 @@ body, .container {
     font-size: 7.6923vw;
     line-height: 10.2564vw;
 }
-.con4 p:nth-of-type(2) strong {
+.con4 p:nth-of-type(2) .pekoo {
     color: #00B0EB;
     font-size: 8.2051vw;
     display: inline-block; 
@@ -177,7 +179,7 @@ body, .container {
     z-index: 10;
 }
 
-.con4 p:nth-of-type(2) strong::after {
+.con4 p:nth-of-type(2) .pekoo::after {
     content: "";
     display: block;
     width: 102%; 
@@ -189,6 +191,11 @@ body, .container {
     z-index: -1; 
 }
 .con4 .peko-intro {
+}
+.con4 .peko-intro .koicaa {
+    display: block;
+    font-size: 6.6667vw;
+    text-align: center;
 }
 .con4 .cloud {
     position: absolute;
