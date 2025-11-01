@@ -493,6 +493,9 @@ body, .container {
         margin-bottom: 6.9231vw;
         margin-top: 0;
       }
+.con6 p > strong {
+    font-family: 'Pretendard', sans-serif;
+}
 .con6 .event-wrap {
         position: relative;
       }
@@ -525,7 +528,48 @@ body, .container {
     top: 40vw;
     left: 50%;
     transform: translateX(-50%);
+    width: 84.6154vw;
 }
+
+/* sns-wrap */
+.sns-wrap {
+}
+.sns-wrap > img {
+    width: 92.3077vw;
+    margin: auto;
+    display: block;
+    margin-top: 10.2564vw;
+    margin-bottom: 5.1282vw;
+}
+.sns-wrap .insta-wrap {
+    display: flex;
+    gap: 2.5641vw;
+    width: 92.3077vw;
+    margin: auto;
+    margin-bottom: 12.8205vw;
+}
+.sns-wrap .insta-wrap .insta-box {
+    width: 44.8718vw;
+    height: 11.7949vw;
+    display: flex;
+    gap: 2.0513vw;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.2821vw;
+    text-decoration: none;  
+}
+.sns-wrap .insta-wrap .insta-box p {
+    font-size: 3.0769vw;    
+    font-family: "Samliphopangche", sans-serif;
+    color: #ffffff;
+}
+.sns-wrap .insta-wrap .insta1 {
+    background-color: #02AFE9;
+}
+.sns-wrap .insta-wrap .insta2 {
+    background-color: #45BE95;
+}
+
 
 
 
