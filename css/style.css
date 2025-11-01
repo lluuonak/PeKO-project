@@ -322,6 +322,7 @@ body, .container {
     position: relative;
     margin-bottom: 0; 
     background-repeat: no-repeat;
+    background-size: cover;
 
 }
 .con5 .event-title {
@@ -373,9 +374,21 @@ body, .container {
 .con5 .simko-message p :nth-child(1){}
 .con5 .simko-message p :nth-child(2){}
 
-.con5 .about-event {}
-.con5 .about-event .prize {}
-.con5 .about-event .prize > img {}
+.con5 .about-event {
+    margin-bottom: 17.9487vw;
+}
+.con5 .about-event .prize {
+    display: flex;
+    flex-direction: column;
+    gap: 8.9744vw;
+    width: 80vw;
+    margin: auto;
+}
+.con5 .about-event .prize > img {
+    width: 66.9231vw;
+    display: block;
+    margin: auto;
+}
 .con5 .about-event .prize .event-details {
     display: flex;
     flex-direction: column;
@@ -390,14 +403,14 @@ body, .container {
     font-size: 3.0769vw;
     font-weight: 700;
     color: #F06C4E;
-    padding: 0.5128vw 2.5641vw;
+    padding: 0.5128vw 2.2641vw;
     box-sizing: border-box;
     background-color: rgba(255, 255, 255, 0.40);
     border: 0.2564vw solid #F06C4E;
     display: inline-block;
     border-radius: 6.4103vw;
     height: 5.8462vw;
-    width: 19.65vw;
+    width: 19.85vw;
     text-align: center;
 }
 .con5 .about-event .prize .event-details .event .content {
@@ -405,6 +418,8 @@ body, .container {
     margin: 0;
     line-height: 1.7;
     width: 55.3846vw;
+    display: flex;
+    align-items: center;
 }
 .con5 .about-event .prize .event-details .event1 {}
 .con5 .about-event .prize .event-details .event2 {}
