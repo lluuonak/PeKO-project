@@ -566,8 +566,14 @@ body, .container {
 .sns-wrap .insta-wrap .insta1 {
     background-color: #02AFE9;
 }
+.sns-wrap .insta-wrap .insta1:hover {
+    background-color: #00A3D9;
+}
 .sns-wrap .insta-wrap .insta2 {
     background-color: #45BE95;
+}
+.sns-wrap .insta-wrap .insta2:hover {
+    background-color: #28AC7F;
 }
 
 
