@@ -363,13 +363,67 @@ body, .container {
 }
 .con5 .how-to-join {    
     margin-bottom: 10.2564vw;
+    position: relative;
 }
 .con5 .how-to-join img {
     width: 92.3077vw;
     margin: auto;
     display: block;
 }
+.con5 .how-to-join .hashtag {
+    width: 83.5897vw;
+    height: 7.1795vw;
+    border: 0.2564vw solid #F06C4E;
+    border-radius: 8vw;
+    position: absolute;
+    bottom: 6.6667vw;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.8205vw;    
+    font-family: 'Pretendard', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+    background-color: #FFFAEF;
+}
+.con5 .how-to-join .hashtag-wrap {
+    display: flex;
+    gap: 2vw;
+    transform: translateX(1vw);
+}
+.con5 .how-to-join .hashtag-wrap span {
+    color: #F06C4E;
+}
+.con5 .how-to-join .hashtag-wrap strong {
+    font-family: 'Pretendard', sans-serif;
+}
 
+.con5 .how-to-join .clipboard {
+    color: #fff;
+    width: 12.8205vw;
+    height: 7.1795vw;
+    background-color: #F06C4E;
+    border: 0.2564vw solid #F06C4E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(3.5vw);
+    /* line-height: 1; */
+    border-top-right-radius: 7.1795vw;
+    border-bottom-right-radius: 7.1795vw;
+}
+
+.con5 .how-to-join .hashtag-wrap::before {
+    content: url('/images/tria.svg');
+    position: absolute;
+    left: 0;
+    width: 5.6410vw;
+    height: 4.1026vw;
+    /* top: -4.1026vw; */
+    top: -4.28vw;
+    left: 25vw;
+}
 
 .con5 .simko-message p :nth-child(1){}
 .con5 .simko-message p :nth-child(2){}
@@ -477,7 +531,8 @@ body, .container {
     margin: auto; */
 }
 .con6 .peko-ground {
-    width: 102vw;
+    width: 100vw;
+    transform: translateY(2.4vw);
 }
 .con6 h2 {
         font-family: "Samliphopangche", sans-serif;
@@ -505,7 +560,7 @@ body, .container {
     background-color: #000;
     text-align: center;
     position: absolute;
-    bottom: 5.6923vw;
+    bottom: 12.6923vw;
     border-radius: 2.5641vw;
     left: 50%;
     transform: translateX(-50%);
@@ -521,11 +576,11 @@ body, .container {
     cursor: pointer;
 }
 .con6 .event-wrap .quiz-btn:hover {
-    background-color: #3A3A3A;
+    background-color: #2D2D2D;
 }
 .con6 .event-wrap .event-check {
     position: absolute;
-    top: 40vw;
+    top: 45vw;
     left: 50%;
     transform: translateX(-50%);
     width: 84.6154vw;

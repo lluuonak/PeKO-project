@@ -79,7 +79,7 @@
                 Event 1
             </div>
             <h2><strong>피코심코</strong><br/>화분 꾸미기 챌린지</h2>
-            <img class="pekosimko-img" src="/images/peko-simko.svg" alt="피코심코">
+            <img class="pekosimko-img" src="/images/peko-simko.png" alt="피코심코">
             <div class="simko-message">
               <p>
               피코심코 자판기에서 받은 작은 화분의<br/>
@@ -94,6 +94,15 @@
             </div>
             <div class="how-to-join">              
               <img src="/images/how-to-join.svg" alt="참여방법">
+              <div class="hashtag">
+                <div class="hashtag-wrap">
+                  <span>필수 해시태그</span>
+                  <strong>#피코심코 @officialkoica @grow_eko</strong>
+                </div>
+                <div class="clipboard">
+                  복사
+                </div>
+              </div>
             </div>
             <div class="about-event">
               <div class="prize">
@@ -128,7 +137,7 @@
                 문제를 맞히고 <strong>CJ 상품권</strong>의 주인공이 되어 보세요!
             </p>
             <div class="event-wrap">
-                <img class="peko-ground" src="/images/peko-ground.png" alt="이벤트 배경">
+                <img class="peko-ground" src="/images/peko-ground2.png" alt="이벤트 배경">
                 <img class="event-check" src="/images/event-check1.svg" alt="이벤트 안내사항">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7URHESeilGhpoD9o9ghjzDSGM65Dxa_4TEk2XJjEcnhUM-w/viewform?usp=dialog" class="quiz-btn">💡 퀴즈 풀고 선물 받기</a>
             </div>
@@ -284,6 +293,60 @@
         }
 
         window.addEventListener('touchmove', handleTouchMoveForTxt2, { passive: false });
+
+
+
+        // 1. 요소 선택
+    const copyButton = document.querySelector('.clipboard');
+    const hashtagText = document.querySelector('.hashtag-wrap strong').textContent;
+
+    // 2. 복사 기능 함수 정의
+    function copyToClipboard() {
+        // 클립보드 API(navigator.clipboard.writeText) 사용 (HTTPS 환경 권장)
+        if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText(hashtagText)
+                .then(() => {
+                    // 성공 시 Alert만 표시
+                    alert('해시태그가 복사되었습니다.');
+                })
+                .catch(err => {
+                    console.error('클립보드 복사 실패:', err);
+                    alert('클립보드 복사 실패. 다시 시도해 주세요.');
+                });
+        } else {
+            // 대체 방식 (HTTP 환경 또는 구형 브라우저)
+            const textArea = document.createElement('textarea');
+            textArea.value = hashtagText;
+            
+            // 화면 밖으로 숨김
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-9999px';
+            
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    // 성공 시 Alert만 표시
+                    alert('해시태그가 복사되었습니다.');
+                } else {
+                    alert('클립보드 복사 실패');
+                }
+            } catch (err) {
+                console.error('클립보드 복사 실패 (execCommand):', err);
+                alert('클립보드 복사 실패. 콘솔을 확인해 주세요.');
+            }
+            document.body.removeChild(textArea);
+        }
+    }
+
+
+    // 3. 버튼에 이벤트 리스너 연결
+    copyButton.addEventListener('click', copyToClipboard);
+
+
     </script>
   </body>
 </html>
