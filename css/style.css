@@ -317,17 +317,98 @@ body, .container {
     flex-direction: column;
     justify-content: center;
     background-image: url('../images/con5-bg.svg');
+    background-position: center 0;
     overflow: hidden; 
     position: relative;
     margin-bottom: 0; 
+    background-repeat: no-repeat;
 
 }
+.con5 .event-title {
+    margin-top: 32.0513vw;
+}
 
-.con5 {}
+.con5 h2 {
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 15.3846vw;
+    margin-bottom: 8.7179vw;   
+    font-family: "Samliphopangche", sans-serif;
+    font-size: 7.1795vw;
+    line-height: 1.4;
+}
+
+.con5 h2 strong {
+    color: #F06C4E;
+}
+
+.con5 .pekosimko-img {
+    width: 92.3077vw;
+    margin: auto;
+}
+
+.con5 .simko-message {
+    display: flex;
+    flex-direction: column;    
+    gap: 3.5897vw;
+    margin-top: 15.3846vw;
+    margin-bottom: 16.6667vw;
+}
+.con5 .simko-message p {
+    text-align: center;
+    margin: 0;
+    font-size: 4.1026vw;
+    line-height: 2;
+}
+.con5 .how-to-join {    
+    margin-bottom: 10.2564vw;
+}
+.con5 .how-to-join img {
+    width: 92.3077vw;
+    margin: auto;
+    display: block;
+}
 
 
+.con5 .simko-message p :nth-child(1){}
+.con5 .simko-message p :nth-child(2){}
 
-
+.con5 .about-event {}
+.con5 .about-event .prize {}
+.con5 .about-event .prize > img {}
+.con5 .about-event .prize .event-details {
+    display: flex;
+    flex-direction: column;
+    gap: 3.8462vw;
+    margin: 0;
+}
+.con5 .about-event .prize .event-details .event {
+    display: flex;
+    gap: 7.1795vw;
+}
+.con5 .about-event .prize .event-details .event .label {
+    font-size: 3.0769vw;
+    font-weight: 700;
+    color: #F06C4E;
+    padding: 0.5128vw 2.5641vw;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.40);
+    border: 0.2564vw solid #F06C4E;
+    display: inline-block;
+    border-radius: 6.4103vw;
+    height: 5.8462vw;
+    width: 19.65vw;
+    text-align: center;
+}
+.con5 .about-event .prize .event-details .event .content {
+    font-size: 3.0769vw;
+    margin: 0;
+    line-height: 1.7;
+    width: 55.3846vw;
+}
+.con5 .about-event .prize .event-details .event1 {}
+.con5 .about-event .prize .event-details .event2 {}
+.con5 .about-event .prize .event-details .event3 {}
 
 
 /* con6 */
