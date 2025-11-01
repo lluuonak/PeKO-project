@@ -121,7 +121,7 @@ body, .container {
     width: 87.1795vw;
     display: block;
     margin: auto;
-    padding-bottom: 100.7692vw;
+    padding-bottom: 122.5641vw;
     box-sizing: border-box;
 }
 
@@ -311,6 +311,22 @@ body, .container {
     }
 
 
+/* con5 */
+.con5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('../images/con5-bg.svg');
+    overflow: hidden; 
+    position: relative;
+    margin-bottom: 0; 
+
+}
+
+.con5 {}
+
+
+
 
 
 
@@ -325,7 +341,7 @@ body, .container {
     margin-bottom: 0; 
 }
 
-.con6 .event-title {
+.event-title {
     width: 16.5154vw;
     height: 8.1923vw;
     margin: auto;
@@ -366,7 +382,6 @@ body, .container {
 }
 .con6 .peko-ground {
     width: 102vw;
-
 }
 .con6 h2 {
         font-family: "Samliphopangche", sans-serif;
