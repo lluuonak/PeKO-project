@@ -444,14 +444,13 @@ to {
     transform: translateX(-0.5vw);
 }
 
-.con5 .how-to-join .hashtag-wrap::before {
+.con5 .how-to-join .hashtag::before {
     content: url('/images/tria.svg');
     position: absolute;
     left: 0;
     width: 5.6410vw;
     height: 4.1026vw;
-    /* top: -4.1026vw; */
-    top: -4vw;
+    top:-3.2052vw;
     left: 25vw;
 }
 
