@@ -536,6 +536,10 @@ to {
     font-size: 3.0769vw;
     margin-top: 7.6923vw;
 }
+.con6 .event-title {
+    margin-top: 12vw;
+}
+
 .con6 p {
     position: relative;
 }
