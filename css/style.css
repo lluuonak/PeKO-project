@@ -26,6 +26,17 @@ img {
     -webkit-user-drag: none; /* Webkit 기반 브라우저 */
 }
 
+a {
+    /* 1. 텍스트 선택 방지 (파란색 영역 잡히는 현상 방지) */
+    user-select: none; 
+    -webkit-user-select: none; /* Chrome, Safari, 구형 Edge */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE/Edge */
+    
+    /* 2. 모바일/터치 기기에서 탭 하이라이트 방지 (파란색 또는 회색 오버레이 방지) */
+    -webkit-tap-highlight-color: transparent; /* iOS, Android Webkit */
+}
+
 body, .container {
     /* 표준 속성: 콘텐츠 선택(하이라이트)을 비활성화 */
     user-select: none; 
@@ -157,6 +168,7 @@ body, .container {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 25.6410vw;
 }
 .con3 p, strong {
     font-family: "Samliphopangche", sans-serif;
@@ -191,6 +203,7 @@ body, .container {
     z-index: -1; 
 }
 .con3 .peko-intro {
+    /* margin-top: 6vw; */
 }
 .con3 .peko-intro .koicaa {
     display: block;
@@ -200,50 +213,51 @@ body, .container {
     margin-bottom: 2vw;
     color: #006B8F;
 }
-.con3 .cloud {
+.con3 .peko-intro .koicaa,
+.con3 .peko-intro p {
+    transform: translateY(-8vw);
+}
+
+
+
+
+/* con4 */
+.con4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10.2564vw;
+
+    padding-left: 5.33vw; 
+    padding-right: 5.33vw;
+    box-sizing: border-box;
+}
+.con4 .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+@keyframes spin {
+from {
+    transform: rotate(0deg); 
+}
+to {
+    transform: rotate(360deg);
+}
+}
+
+.con4 .profile .flower {
     position: absolute;
 }
-.con3 .cld1 {}
-.con3 .cld2 {}
-.con3 .cld3 {}
-
-
-
-
-
-    /* con4 */
-    .con4 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10.2564vw;
-    }
-    .con4 .profile {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-    }
-
-    @keyframes spin {
-    from {
-        transform: rotate(0deg); 
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.con4 .profile .pink-f {
+    width: 7.4359vw;
 }
-
-    .con4 .profile .flower {
-        position: absolute;
-    }
-    .con4 .profile .pink-f {
-        width: 7.4359vw;
-    }
-    .con4 .profile .yellow-f {
-        width: 8.2051vw;
-    }
-    .con4 .profile .pink-f1 {
+.con4 .profile .yellow-f {
+    width: 8.2051vw;
+}
+.con4 .profile .pink-f1 {
     left: 0;
     top: 4.8718vw;
     animation: spin 7s linear infinite reverse; 
@@ -284,24 +298,34 @@ body, .container {
     gap: 4.1026vw;
     white-space: nowrap;
     overflow-x: auto;
-    width: 100%;
-    scroll-snap-type: x mandatory;   /* ← 스와이프 UX 부드럽게 */
-    -webkit-overflow-scrolling: touch; /* ← iOS에서 터치 스크롤 부드럽게 */
-    scroll-behavior: smooth;           /* ← 애니메이션 부드럽게 */
+
+    /*
+    scroll-snap-type: x mandatory;   
+    -webkit-overflow-scrolling: touch; 
+    scroll-behavior: smooth;           
+    */
+
+    width: 100vw;
+    box-sizing: content-box;
+    padding-left: 33.334vw; 
+    padding-right: 33.334vw;
+
+    
+    -ms-overflow-style: none; /* IE, Edge */
+    scrollbar-width: none; /* Firefox */
+
 }
     .con4 .about-peko .about-cards::-webkit-scrollbar {
     display: none; /* 스크롤바 영역 자체를 숨김 */
 }
 
-    .con4 .about-peko .about-cards {
-        -ms-overflow-style: none; /* IE, Edge */
-        scrollbar-width: none; /* Firefox */
+.con4 .about-peko .about-cards .slide {
+    width: 23.3333;
+    height: 35.6410vw;
+    flex-shrink: 0;
+    scroll-snap-align: center; 
     }
-    .con4 .about-peko .about-cards img {
-        width: 23.0769vw;
-        flex-shrink: 0; /* 이미지 크기 고정 */
-        scroll-snap-align: center; /* ← 카드 하나씩 정렬 */
-      }
+
     .con4 .profile .profile-img {
         /* width: 33.5897vw; */
         /* height: 40.2564vw; */
@@ -391,6 +415,8 @@ body, .container {
     display: flex;
     gap: 2vw;
     transform: translateX(1vw);
+    padding-top: 0.2vw;
+    box-sizing: border-box;
 }
 .con5 .how-to-join .hashtag-wrap span {
     color: #F06C4E;
@@ -414,6 +440,10 @@ body, .container {
     border-bottom-right-radius: 7.1795vw;
 }
 
+.con5 .how-to-join .clipboard span {
+    transform: translateX(-0.5vw);
+}
+
 .con5 .how-to-join .hashtag-wrap::before {
     content: url('/images/tria.svg');
     position: absolute;
@@ -421,7 +451,7 @@ body, .container {
     width: 5.6410vw;
     height: 4.1026vw;
     /* top: -4.1026vw; */
-    top: -4.28vw;
+    top: -4vw;
     left: 25vw;
 }
 
@@ -617,7 +647,13 @@ body, .container {
     font-size: 3.0769vw;    
     font-family: "Samliphopangche", sans-serif;
     color: #ffffff;
+    line-height: 1;
 }
+.sns-wrap .insta-wrap .insta-box p,
+.sns-wrap .insta-wrap .insta-box img {
+    transform: translateX(-1vw);
+}
+
 .sns-wrap .insta-wrap .insta1 {
     background-color: #02AFE9;
 }
