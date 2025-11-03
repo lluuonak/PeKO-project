@@ -66,11 +66,11 @@
             <div class="about-peko">
                 <img class="clover" src="/images/peko-clover.png" alt="피코클로버">
                 <div class="about-cards">
-                    <img class="slide" src="/images/cd1.png" alt="카드1">
+                    <img class="slide cd1" src="/images/cd1.png" alt="카드1">
                     <img class="slide" src="/images/cd2.png" alt="카드2">
                     <img class="slide" src="/images/cd3.png" alt="카드3">
                     <img class="slide" src="/images/cd4.png" alt="카드4">
-                    <img class="slide" src="/images/cd5.png" alt="카드5">
+                    <img class="slide cd5" src="/images/cd5.png" alt="카드5">
                 </div>
             </div>
         </div>
@@ -202,9 +202,33 @@
             // txt02 애니메이션 완료 후 스크롤 대기
             setTimeout(() => {
               txt1GroupShown = true;
+              // --- ★★★ 카드 3 중앙 정렬 실행 위치 (통합) ★★★ ---
+            const aboutCards = document.querySelector('.about-cards');
+            // 카드3이 중앙에 위치하도록 스크롤 위치 조정
+            const card3 = document.querySelector('.about-cards .slide:nth-child(3)');
+            
+            if (aboutCards && card3) {
+                // containerWidth는 aboutCards의 실제 보이는 너비(padding 제외)여야 합니다. 
+                // aboutCards의 width가 100vw이므로 clientWidth를 사용합니다.
+                const containerWidth = aboutCards.clientWidth; 
+                const cardOffset = card3.offsetLeft;
+                const cardWidth = card3.offsetWidth;
+                
+                // 스크롤 위치 계산: 카드 시작 위치 + 카드 절반 - 컨테이너 절반
+                const scrollCenterPosition = cardOffset + (cardWidth / 2) - (containerWidth / 2);
+                
+                // 부드럽게 스크롤 이동
+                aboutCards.scrollTo({
+                    left: scrollCenterPosition,
+                    behavior: 'smooth' 
+                });
+              }
             }, 1000);
           }, 800); // txt01 이후 500ms 후
         });
+
+        
+       
 
         // 스크롤 시도 횟수
         let scrollAttempts = 0;
