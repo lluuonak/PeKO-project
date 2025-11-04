@@ -307,8 +307,10 @@ to {
 
     width: 100vw;
     box-sizing: content-box;
-    padding-left: 33.334vw; 
-    padding-right: 33.334vw;
+    /* padding-left: 33.334vw;  */
+    /* padding-right: 33.334vw; */
+    scroll-padding-left: 38.334vw; /* 대략 중앙에 올 수 있도록 조정된 값 */
+    scroll-padding-right: 38.334vw; /* 대략 중앙에 올 수 있도록 조정된 값 */
 
     
     -ms-overflow-style: none; /* IE, Edge */
@@ -326,12 +328,15 @@ to {
     scroll-snap-align: center; 
     }
 
+
+    
+
     .con4 .about-peko .about-cards .cd1 {
-        margin-left: 3vw;
+        /* margin-left: 3vw; */
     }
 
     .con4 .about-peko .about-cards .cd5 {
-        margin-right: 3vw;
+        /* margin-right: 3vw; */
     }
 
     .con4 .profile .profile-img {

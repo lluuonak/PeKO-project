@@ -172,6 +172,8 @@
         const txt02 = document.querySelector('.txt02');
         const txt03 = document.querySelector('.txt03');
         const txt04 = document.querySelector('.txt04');
+        const aboutCards = document.querySelector('.about-cards');
+
 
         let txt1GroupShown = false;
         let txt2GroupShown = false;
@@ -185,6 +187,37 @@
 
         // 페이지 로드 시 스크롤 방지
         document.body.style.overflow = 'hidden';
+
+        // --- ★★★ 카드 3 중앙 정렬 함수 정의 ★★★ ---
+        function centerCard3() {
+            // 카드3이 중앙에 위치하도록 스크롤 위치 조정
+            const card3 = document.querySelector('.about-cards .slide:nth-child(3)');
+            
+            if (aboutCards && card3) {
+                // aboutCards의 실제 보이는 너비
+                const containerWidth = aboutCards.clientWidth; 
+                const cardOffset = card3.offsetLeft;
+                const cardWidth = card3.offsetWidth;
+                
+                // 스크롤 위치 계산: 카드 시작 위치 + 카드 절반 - 컨테이너 절반
+                const scrollCenterPosition = cardOffset + (cardWidth / 2) - (containerWidth / 2);
+                
+                // 부드럽게 스크롤 이동
+                aboutCards.scrollTo({
+                    left: scrollCenterPosition,
+                    behavior: 'smooth' 
+                });
+                
+                // 중앙 정렬이 제대로 되지 않을 경우를 대비해 한 번 더 시도 (안정성 강화)
+                setTimeout(() => {
+                     aboutCards.scrollTo({
+                        left: scrollCenterPosition,
+                        behavior: 'smooth' 
+                    });
+                }, 100); 
+              }
+        }
+        // ------------------------------------------
 
         // 페이지 로드 후 txt01, txt02 순차 표시
         window.addEventListener('load', () => {
@@ -202,27 +235,11 @@
             // txt02 애니메이션 완료 후 스크롤 대기
             setTimeout(() => {
               txt1GroupShown = true;
-              // --- ★★★ 카드 3 중앙 정렬 실행 위치 (통합) ★★★ ---
-            const aboutCards = document.querySelector('.about-cards');
-            // 카드3이 중앙에 위치하도록 스크롤 위치 조정
-            const card3 = document.querySelector('.about-cards .slide:nth-child(3)');
-            
-            if (aboutCards && card3) {
-                // containerWidth는 aboutCards의 실제 보이는 너비(padding 제외)여야 합니다. 
-                // aboutCards의 width가 100vw이므로 clientWidth를 사용합니다.
-                const containerWidth = aboutCards.clientWidth; 
-                const cardOffset = card3.offsetLeft;
-                const cardWidth = card3.offsetWidth;
-                
-                // 스크롤 위치 계산: 카드 시작 위치 + 카드 절반 - 컨테이너 절반
-                const scrollCenterPosition = cardOffset + (cardWidth / 2) - (containerWidth / 2);
-                
-                // 부드럽게 스크롤 이동
-                aboutCards.scrollTo({
-                    left: scrollCenterPosition,
-                    behavior: 'smooth' 
-                });
-              }
+              
+              // --- ★★★ 카드 3 중앙 정렬 실행 위치 (통합 및 수정) ★★★ ---
+              centerCard3(); 
+              // --------------------------------------------------------
+              
             }, 1000);
           }, 800); // txt01 이후 500ms 후
         });
