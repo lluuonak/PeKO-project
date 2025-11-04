@@ -387,6 +387,11 @@
     // 3. 버튼에 이벤트 리스너 연결
     copyButton.addEventListener('click', copyToClipboard);
 
+        document.addEventListener('contextmenu', function(e) {
+        // 마우스 오른쪽 버튼 클릭(컨텍스트 메뉴) 방지
+        e.preventDefault();
+    }, false);
+
 
     </script>
   </body>

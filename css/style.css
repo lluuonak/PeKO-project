@@ -10,6 +10,21 @@
     font-display: swap; 
 }
 
+/* 모든 요소에 텍스트 선택 및 메뉴 호출 차단 */
+* {
+    /* 텍스트 선택 방지 */
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    
+    /* 이미지 드래그 방지 (이미지 복사 메뉴에도 영향을 줌) */
+    -webkit-user-drag: none !important;
+    
+    /* iOS Safari에서 꾹 눌러 메뉴가 뜨는 것을 차단하는 핵심 속성 */
+    -webkit-touch-callout: none !important;
+}
+
 
 /* Pretendard 폰트 적용 */
 body {
@@ -23,7 +38,10 @@ html, body {
 }
 
 img {
-    -webkit-user-drag: none; /* Webkit 기반 브라우저 */
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -webkit-touch-callout: none !important; 
+    -webkit-user-drag: none !important;
 }
 
 a {
