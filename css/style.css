@@ -235,7 +235,9 @@ body, .container {
 .con3 .peko-intro p {
     transform: translateY(-8vw);
 }
-
+.con3 .peko-intro .koicaa span {
+    color: #000;
+}
 
 
 

@@ -50,8 +50,8 @@
         </div>
         <div class="con con3">
           <div class="peko-intro">
-                <p>한국국제협력단</p>
-                <strong class="koicaa">KOICA</strong>
+                <p>대한민국 대표 개발협력기관</p>
+                <strong class="koicaa">KOICA<span>의</span></strong>
                 <p>평화요정 <strong class="pekoo">PeKO</strong>를<br/>소개합니다!</p>
             </div>
         </div>
@@ -387,12 +387,20 @@
     // 3. 버튼에 이벤트 리스너 연결
     copyButton.addEventListener('click', copyToClipboard);
 
-        document.addEventListener('contextmenu', function(e) {
+        
+    
+    // --- 컨텍스트 메뉴 및 기본 드래그 방지 ---
+    document.addEventListener('contextmenu', function(e) {
         // 마우스 오른쪽 버튼 클릭(컨텍스트 메뉴) 방지
         e.preventDefault();
     }, false);
 
+    // (선택 사항) 드래그 시작 이벤트도 방지하여 안정성 추가 
+    document.addEventListener('dragstart', function(e) {
+        e.preventDefault();
+    }, false);
 
+    
     </script>
   </body>
 </html>
